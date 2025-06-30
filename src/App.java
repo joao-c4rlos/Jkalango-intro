@@ -4,7 +4,7 @@ import br.com.jkalango.view.JSplash;
 public class App {
     public static void main(String[] args) throws Exception {
         new JSplash();
-        new JIntro();
+        
         Formiga f = new Formiga("JFormiga");
         System.out.println(f.getNome());
         f.mover();

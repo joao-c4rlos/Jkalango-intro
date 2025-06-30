@@ -5,6 +5,10 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+
+import jkalangoconsole.bin.br.com.jkalango.view.JCadastroJogador;
+
+import java.awt.Color;
 //classe AWT
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -17,18 +21,18 @@ public class JIntro extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
-
+        getContentPane().setBackground(Color.DARK_GRAY);
         String intro = "<html><body style='width: 450px;'>"
-                + "Nas entranhas apodrecidas de um mundo esquecido, onde o céu sangra em silêncio e o chão sussurra horrores antigos, rasteja uma criatura de escamas ressecadas e olhos ocos: <br> — JKalango, o último de uma linhagem profanada pelo tempo.<br>"
+                + "Nas entranhas apodrecidas de um mundo esquecido, onde o céu sangra em silêncio e o chão sussurra horrores antigos, rasteja uma criatura de escamas ressecadas e olhos ocos: <br> JKalango, o último de uma linhagem profanada pelo tempo.<br>"
                 + //
                 "\n" +
                 "Nascido das cinzas de um cerrado amaldiçoado, onde a vida se retorce em espasmos de dor e as árvores gemem como cadáveres pendurados, JKalango não busca glória… ele busca a perpetuação de sua espécie moribunda, cuja carne apodrece antes mesmo de nascer. Mas não está sozinho.<br>"
                 + //
                 "\n" +
                 "Ao seu lado, rastejam os poucos que ainda não foram devorados pela decadência:<br>" + //
-                "— JFormigas, espectros minúsculos com mandíbulas enferrujadas, que perfuram carne e ossos ao sussurro da fome eterna…<br>"
+                "JFormigas, espectros minúsculos com mandíbulas enferrujadas, que perfuram carne e ossos ao sussurro da fome eterna…<br>"
                 +
-                "— JAbelinhas, seres deformados, cobertos de pelos enegrecidos e olhos vazios, que destilam um mel espesso e negro como óleo, capaz de dissolver a alma de quem o prova.<br>"
+                "JAbelinhas, seres deformados, cobertos de pelos enegrecidos e olhos vazios, que destilam um mel espesso e negro como óleo, capaz de dissolver a alma de quem o prova.<br>"
                 + //
                 "\n" +
                 "Mas há um preço para tentar sobreviver naquele mundo empesteado: Missões. Cada uma delas mais hedionda que a outra. Missões que exigem o fôlego arrancado dos vivos, o sangue fermentado de bestas esquecidas e o enfrentamento de horrores que não têm nome — pois os nomes foram engolidos pelas trevas há séculos.<br>"
@@ -43,8 +47,7 @@ public class JIntro extends JFrame {
                 "\n" +
                 "" + "</body></html>";
         JLabel labelTexto = new JLabel(intro);
-        labelTexto.setOpaque(true); // necessário para o fundo aparecer
-        labelTexto.setBackground(new java.awt.Color(30, 30, 30)); // cinza escuro
+     
         labelTexto.setForeground(java.awt.Color.WHITE); // letras brancas
         add(labelTexto);
 
@@ -57,8 +60,10 @@ public class JIntro extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
+                new JCadastroJogador();
                 // TODO Auto-generated method stub
-                JOptionPane.showMessageDialog(JIntro.this, "Primeira missão iniciada");
+                //JOptionPane.showMessageDialog(JIntro.this, "Primeira missão iniciada");
 
             }
 

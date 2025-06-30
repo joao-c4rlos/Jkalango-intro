@@ -31,7 +31,7 @@ public JSplash(){
         @Override
         public void actionPerformed(ActionEvent e) {
             // TODO Auto-generated method stub
-            JOptionPane.showMessageDialog(JSplash.this, "JKalango");
+            new JIntro();
         }
         
     });
