@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-import jkalangoconsole.bin.br.com.jkalango.view.JCadastroJogador;
+import jkalangoconsole.JCadastroJogador;
 
 import java.awt.Color;
 //classe AWT
